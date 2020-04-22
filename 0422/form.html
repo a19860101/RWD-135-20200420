@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="gogogo.html" method="get">
+        <!-- 單行文字 -->
+        <label for="name">姓名</label>
+        <input type="text" name="name" id="name" placeholder="請輸入姓名" readonly>
+        <br>
+        <br>
+        <label for="pw">密碼</label>
+        <input type="password" name="pw" id="pw" placeholder="請輸入密碼" required>
+        <br>
+        <br>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <br>
+        <label for="birth">生日</label>
+        <input type="date" name="birth" id="birth">
+        <br>
+        <br>
+        <!-- 單選核取按鈕 -->
+        性別
+        <input type="radio" name="gender" id="men" value="男">
+        <label for="men">男</label>
+
+        <input type="radio" name="gender" id="women" value="女">
+        <label for="women">女</label>
+        <br>
+        <br>
+        <!-- 多選核取按鈕 -->
+        技能
+        <input type="checkbox" name="skill" id="graphic" value="平面設計">
+        <label for="graphic">平面設計</label>
+        
+        <input type="checkbox" name="skill" id="web" value="網頁設計">
+        <label for="web">網頁設計</label>
+
+        <input type="checkbox" name="skill" id="animate" value="動畫設計">
+        <label for="animate">動畫設計</label>
+
+        <br>
+        <br>
+        <!-- 下拉式選單 -->
+        學歷
+        <select name="edu" id="edu">
+            <option value="國小">國小</option>
+            <option value="國中">國中</option>
+            <option value="高中職">高中職</option>
+            <option value="大專院校">大專院校</option>
+        </select>
+        <br>
+        <br>
+        <!-- 多行文字 -->
+        <label for="comment">評論</label>
+        <textarea name="comment" id="comment" cols="60" rows="5" placeholder="請輸入評論"></textarea>
+        <br>
+        <br>
+        <!-- 按鈕 -->
+        <input type="submit" value="送出">
+        <input type="reset">
+        <input type="button" value="取消">
+        <button>自訂義</button>
+    </form>
+    <hr>
+</body>
+</html>
