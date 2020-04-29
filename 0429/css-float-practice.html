@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width:1200px;
+            margin: auto;
+
+            background-color: #aaa;
+        }
+        .box {
+            width: calc(100% / 4);
+            padding: 15px;
+            float: left;
+        }
+        .content {
+            background-color: #ccc;
+            padding: 15px;
+        }
+        .clearfix::after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box">
+            <div class="content">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ab ea, facilis rerum veritatis doloribus, nam dolorem numquam aperiam illo architecto ratione praesentium atque sit laborum deleniti odio laboriosam? Voluptatibus.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ab ea, facilis rerum veritatis doloribus, nam dolorem numquam aperiam illo architecto ratione praesentium atque sit laborum deleniti odio laboriosam? Voluptatibus.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ab ea, facilis rerum veritatis doloribus, nam dolorem numquam aperiam illo architecto ratione praesentium atque sit laborum deleniti odio laboriosam? Voluptatibus.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ab ea, facilis rerum veritatis doloribus, nam dolorem numquam aperiam illo architecto ratione praesentium atque sit laborum deleniti odio laboriosam? Voluptatibus.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

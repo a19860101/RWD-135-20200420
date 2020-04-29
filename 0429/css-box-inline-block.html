@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 900px;
+            font-size: 0;
+            /* background-color: #ffe0ac; */
+
+            margin: auto;
+        }
+
+        .box {
+            width: 300px;
+            background-color: #ffacb7;
+            padding: 15px;
+
+
+            display: inline-block;
+            font-size: 16px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        當inline-block並排的時候，元素之間會有空隙
+        解法
+        1. 將inline-block的父元素文字大小歸零
+        2. 將inline-block的文字還原
+        *3. 設定vertical-align top或middle
+     -->
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis repellat sit nesciunt ad, corporis repellendus doloribus modi accusantium molestiae. Adipisci mollitia, voluptatem explicabo nemo quisquam quod excepturi doloremque at recusandae?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor consequuntur ab sit delectus reiciendis rerum quasi officiis consequatur ad aliquam, recusandae similique est labore laboriosam voluptatum illo id nemo tempora quis quisquam quibusdam itaque quidem perferendis nostrum. Veniam esse modi blanditiis at, dicta ullam molestias dolorem accusantium vero.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur neque maiores ea ipsum culpa officiis, sunt obcaecati natus voluptatum nam! Asperiores quia odit quos et dolores ea dolorem a non?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

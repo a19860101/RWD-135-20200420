@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 900px;
+            background-color: rgb(250, 169, 169);
+            margin: auto;
+            /* height: 300px; */
+            /* overflow: auto; */
+        }
+        .box {
+            width: 300px;
+            /* height: 150px; */
+            background-color: #8ec6c5;
+            float: left;
+            padding: 15px;
+        }
+       .clearfix::after {
+           content:"";
+           display: block;
+           clear: both;
+       }
+           
+       .clearfix2 {
+           display: flow-root;
+       }
+    </style>
+</head>
+<body>
+    <!-- 
+        當所有子元素都是浮動(float)時，父元素的高度會歸零
+
+     -->
+    <div class="container clearfix2">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea tenetur exercitationem fugiat aperiam, enim fuga voluptate molestias temporibus quasi deleniti quis tempore omnis. Ad dolor quisquam debitis optio accusamus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea tenetur exercitationem fugiat aperiam, enim fuga voluptate molestias temporibus quasi deleniti quis tempore omnis. Ad dolor quisquam debitis optio accusamus.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur itaque quam rem veritatis pariatur ipsam. Laboriosam, distinctio. Nam, qui excepturi facilis non sapiente odit perferendis incidunt. Repellat impedit placeat vitae provident porro facere minus aspernatur minima modi, quod alias at.
+            </p>
+        </div>
+        <!-- <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea tenetur exercitationem fugiat aperiam, enim fuga voluptate molestias temporibus quasi deleniti quis tempore omnis. Ad dolor quisquam debitis optio accusamus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea tenetur exercitationem fugiat aperiam, enim fuga voluptate molestias temporibus quasi deleniti quis tempore omnis. Ad dolor quisquam debitis optio accusamus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea tenetur exercitationem fugiat aperiam, enim fuga voluptate molestias temporibus quasi deleniti quis tempore omnis. Ad dolor quisquam debitis optio accusamus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea tenetur exercitationem fugiat aperiam, enim fuga voluptate molestias temporibus quasi deleniti quis tempore omnis. Ad dolor quisquam debitis optio accusamus.
+            </p>
+        </div> -->
+    </div>
+</body>
+</html>
