@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            background-color: #8fa4b6;
+        }
+        .box {
+            /* width: calc(100% / 4); */
+            flex-basis: 500px;
+            /* 
+                flex-grow 預設0 關閉
+                flex-shrink 預設1 開啟
+            
+             */
+        }
+        .box:nth-of-type(1){
+            /* flex-grow:0; */
+            flex-shrink: 1;
+            background-color: #e43f5a;
+        }
+        .box:nth-of-type(2){
+            /* flex-grow: 5; */
+            flex-shrink: 0;
+            background-color: #f6f578;
+        }
+        .box:nth-of-type(3){
+            /* flex-grow: 1; */
+            flex-shrink: 7;
+            background-color: #40bad5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam laudantium facilis! Voluptatum odit excepturi, ut consequatur ipsam sit itaque? Labore dolor perferendis dolorum numquam necessitatibus fugiat dolores excepturi odit.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum a odit nemo eaque vero aliquid ullam excepturi minus ex! Quos, dolore odio! Blanditiis ducimus, quisquam quis laborum temporibus rem dignissimos in saepe incidunt eius architecto at et nisi necessitatibus fugit?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni cupiditate, nisi praesentium vero sapiente veniam, amet tempora doloribus assumenda officiis molestias error dolores. Ut quasi repellat earum voluptatem, minima quidem.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
