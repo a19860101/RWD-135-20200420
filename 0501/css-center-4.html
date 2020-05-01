@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .vam {
+            height: 100%;
+            font-size: 0;
+        }
+        .vam::before {
+            content:"";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .vam > * {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+            background-color: #ccc;
+
+            margin-bottom: 20px;
+        }
+        .picture {
+            width: 400px;
+            height: 400px;
+        }
+        .content {
+            padding: 20px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container vam">
+        <div class="picture">
+            <img src="https://picsum.photos/id/61/400" alt="">
+        </div>
+        <div class="content">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero veritatis odio ex quae exercitationem eum placeat facilis laborum unde magni. Consequatur quae fugit sed reiciendis totam odio officia enim neque.
+            </p>
+            <a href="#">More</a>
+        </div>
+    </div>
+    <div class="container vam">
+        <div class="content">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero veritatis odio ex quae exercitationem eum placeat facilis laborum unde magni. Consequatur quae fugit sed reiciendis totam odio officia enim neque.
+            </p>
+            <a href="#">More</a>
+        </div>
+        <div class="picture">
+            <img src="https://picsum.photos/id/161/400" alt="">
+        </div>
+    </div>
+</body>
+</html>
