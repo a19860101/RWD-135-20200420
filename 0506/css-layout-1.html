@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Oswald", "Microsoft Jhenghei"
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            /*view height*/
+            background-color: #f6d743;
+            background: url("https://picsum.photos/id/18/1920/1080") center center no-repeat;
+            background-size: cover;
+
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            top: 0;
+            background-color: rgba(0,0,0,.2);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 0 10px;
+            font-weight: 600;
+        }
+
+        .menu a::after {
+            content: "";
+            display: block;
+            /* width: 0%; */
+            opacity: 0;
+            border-bottom: 4px solid #ffffff;
+            position: relative;
+            top: 5px;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover::after {
+            /* width: 100%; */
+            opacity: 1;
+        }
+
+        .title {
+            text-align: center;
+            padding-top: 200px; 
+        }
+
+        .title h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: -2px 2px 2px black;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 100px;
+            border-radius: 26px;
+            border: 3px #fff solid;
+            text-decoration: none;
+            background-color: #ccc;
+        }
+
+        .btn-w {
+            background-color: #fff;
+            color: #000;
+            transition: .3s;
+        }
+
+        .btn-w:hover {
+            background-color: rgba(255, 255, 255, .9);
+            border-color: rgba(255, 255, 255, .2);
+        }
+
+        .btn-t {
+            background-color: transparent;
+            color: #fff;
+            transition: .3s;
+        }
+
+        .btn-t:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .arrow {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 30px;
+        }
+
+        .arrow a {
+            color: #fff;
+        }
+
+        #scroll-nav {
+            position: fixed;
+            left: 15px;
+            top: 35%;
+            z-index: 100;
+        }
+
+        #scroll-nav a {
+            display: block;
+            text-decoration: none;
+            color: transparent;
+            border-left: 2px solid #fff;
+            padding-left: 8px;
+            margin-bottom: 5px;
+            transition: .3s;
+        }
+
+        #scroll-nav a:hover {
+            color: #fff;
+        }
+
+        #explorer {
+            width: 100%;
+            height: 100vh;
+            background-color: #f6d743;
+            background: url("https://picsum.photos/id/29/1920/1080") center center no-repeat;
+            background-size: cover;
+
+            position: relative;
+        }
+        #power {
+            width: 100%;
+            height: 100vh;
+            background-color: #f6d743;
+            background: url("https://picsum.photos/id/39/1920/1080") center center no-repeat;
+            background-size: cover;
+
+            position: relative;
+        }
+        #more {
+            width: 100%;
+            height: 100vh;
+            background-color: #f6d743;
+            background: url("https://picsum.photos/id/59/1920/1080") center center no-repeat;
+            background-size: cover;
+
+            position: relative;
+        }
+        footer {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
+        footer a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <i class="fas fa-bolt fa-10x"></i> -->
+    <div id="scroll-nav">
+        <a href="#">TESLA</a>
+        <a href="#">深入探索TESLA</a>
+        <a href="#">全方位能源供應</a>
+        <a href="#">MODEL Y</a>
+    </div>
+    <nav>
+        <div class="logo">
+            <a href="#">tesla</a>
+        </div>
+        <div class="menu">
+            <a href="#">model s</a>
+            <a href="#">model 3</a>
+            <a href="#">model x</a>
+            <a href="#">model y</a>
+            <a href="#">cybertruck</a>
+            <a href="#">roadster</a>
+            <a href="#">能源</a>
+        </div>
+        <div class="info">
+            <a href="#">登入</a>
+            <a href="#">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="title">
+            <h2>MODEL S</h2>
+            <div class="title-button">
+                <a href="#" class="btn btn-w">立即訂購</a>
+                <a href="#" class="btn btn-t">造訪體驗店</a>
+            </div>
+        </div>
+        <div class="arrow">
+            <a href="#">
+                <i class="fas fa-chevron-down fa-2x"></i>
+            </a>
+        </div>
+    </header>
+    <div id="explorer">
+        <div class="title">
+            <h2>深入探索TESLA</h2>
+            <div class="title-button">
+                <a href="#" class="btn btn-w">立即試駕</a>
+                <a href="#" class="btn btn-t">現貨車</a>
+            </div>
+        </div>
+        <div class="arrow">
+            <a href="#">
+                <i class="fas fa-chevron-down fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div id="power">
+        <div class="title">
+            <h2>全方位能源供應</h2>
+            <div class="title-button">
+                <a href="#" class="btn btn-w">了解更多內容</a>
+            </div>
+        </div>
+        <div class="arrow">
+            <a href="#">
+                <i class="fas fa-chevron-down fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div id="more">
+        <div class="title">
+            <h2>更多內容</h2>
+            <div class="title-button">
+                <a href="#" class="btn btn-w">了解更多內容</a>
+            </div>
+        </div>
+        <footer>
+            <a href="#">Tesla © 2020</a>
+            <a href="#">隱私權與規範</a>
+            <a href="#">聯絡我們</a>
+            <a href="#">工作機會</a>
+            <a href="#">獲取電子通訊</a>
+            <a href="#">地點</a>
+        </footer>
+    </div>
+</body>
+
+</html>
