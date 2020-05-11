@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft Jhenghei";
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  width: 100%;
+  /* max-width: 100%; */
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  color: #0087f5;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.vam {
+  height: 100%;
+  font-size: 0;
+}
+.vam::before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.vam > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.t-left {
+  text-align: left;
+}
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
+}
+.t-justify {
+  text-align: justify;
+}
+@media (min-width: 480px) {
+  .t-sm-left {
+    text-align: left;
+  }
+  .t-sm-center {
+    text-align: center;
+  }
+  .t-sm-right {
+    text-align: right;
+  }
+  .t-sm-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 768px) {
+  .t-md-left {
+    text-align: left;
+  }
+  .t-md-center {
+    text-align: center;
+  }
+  .t-md-right {
+    text-align: right;
+  }
+  .t-md-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 1200px) {
+  .t-lg-left {
+    text-align: left;
+  }
+  .t-lg-center {
+    text-align: center;
+  }
+  .t-lg-right {
+    text-align: right;
+  }
+  .t-lg-justify {
+    text-align: justify;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 10px;
+  border: 3px #fff solid;
+  text-decoration: none;
+  background-color: #ccc;
+  color: #000;
+}
+.btn-blue {
+  background-color: #25c1ff;
+}
+.btn-red {
+  background-color: #fc2e2e;
+  color: #fff;
+}
