@@ -18,6 +18,13 @@ a {
   text-decoration: none;
   color: #0087f5;
 }
+/* .no-padding {
+  padding: 0!important;
+} */
+.no-padding > [class^="col"] {
+  padding: 0!important;
+}
+
 .clearfix::after {
   content: "";
   display: block;
