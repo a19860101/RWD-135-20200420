@@ -1,5 +1,6 @@
 nav {
     position: fixed;
+    z-index: 999;
 }
 nav .row{
     justify-content: space-between;
@@ -95,4 +96,10 @@ header p {
 #contact h2 {
     font-size: 36px;
     margin-bottom: 50px;
+}
+
+footer {
+    background-color: #ecfcff;
+    padding: 30px 0;
+    color: #888;
 }
