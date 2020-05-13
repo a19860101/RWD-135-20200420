@@ -62,3 +62,15 @@ header p {
 #service i {
     color: #ff6c47;
 }
+/* portfolio */
+#portfolio .box {
+    position: relative;
+}
+#portfolio .box img {
+    position: absolute;
+}
+#portfolio .box .content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
