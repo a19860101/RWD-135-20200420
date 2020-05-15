@@ -1,15 +1,29 @@
 nav {
-    position: fixed;
+    position: relative;
     z-index: 999;
 }
 nav .row{
     justify-content: space-between;
+    flex-direction: column;
 }
 nav a {
-    display: inline-block;
+    display: block;
     padding: 20px 15px;
     color: #000;
     font-weight: bold;
+    border-bottom: 1px solid #b9b9b9;
+}
+@media(min-width: 768px){
+    nav {
+        position: fixed;
+    }
+    nav .row{
+        flex-direction: row;
+    }
+    nav a {
+        display: inline-block;
+        border-bottom: 0;
+    }
 }
 header {
     background-image: 
