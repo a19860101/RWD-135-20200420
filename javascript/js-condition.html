@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //判斷式
+        let a = 30;
+        if(a > 0){
+            console.log('success 1');
+        }
+
+        if(a > 0){
+            console.log('success 2');
+        }else{
+            console.log('error');
+        }
+
+        if(a > 0){
+            console.log('success 3');
+        }else if(a < 0){
+            console.log('success 4');
+        }else if(a == 0){
+            console.log('success 5');
+        }else{
+            console.log('error');
+        }
+
+        switch(a){
+            case 0:
+                console.log(0);
+                break;
+            case 1:
+                console.log(1);
+                break;
+            case 2:
+                console.log(2);
+                break;
+            case 3:
+                console.log(3);
+                break;
+            default:
+                console.log('error');
+        }
+        switch(true){
+            case a > 0:
+                console.log('正整數');
+                break;
+            case a < 0:
+                console.log('負整數');
+                break;
+            default: 
+                console.log('error');
+        }
+    </script>
+</body>
+</html>
