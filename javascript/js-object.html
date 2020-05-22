@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let user = {
+        //     name: 'John',
+        //     mail: 'john@gmail.com',
+        //     gender: 'male'
+        // }
+        // console.log(user);
+        // console.log(user.name);
+        // console.log(user.mail);
+        // console.log(user.gender);
+        // console.log(user['name']);
+        // console.log(user['mail']);
+        // console.log(user['gender']);
+        let users = [
+            {
+                name: 'John',
+                mail: 'john@gmail.com',
+                gender: 'male',
+                method(){
+                    return this;
+                }
+            },
+            {
+                name: 'Mary',
+                mail: 'mary@gmail.com',
+                gender: 'female',
+                method:()=>{
+                    return this;
+                }
+            },
+            {
+                name: 'Ban',
+                mail: 'ban@gmail.com',
+                gender: 'male',
+                method(){
+                    return 'call 3';
+                }
+            }
+        ];
+        console.log(users[0].method());
+        console.log(users[1].method());
+        // users.forEach(function(user){
+        //     console.log(user.name);
+        //     console.log(user.mail);
+        //     console.log(user.gender);
+        //     console.log(user.method());
+        // })
+        // for(let i=0;i<users.length;i++){
+        //     console.log(users[i].name);
+        //     console.log(users[i].mail);
+        //     console.log(users[i].gender);
+        // }
+    </script>
+</body>
+</html>

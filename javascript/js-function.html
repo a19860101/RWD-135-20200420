@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        
+        //函式宣告式 -->具有提升性
+        function test(){
+            let a = 100;
+            console.log(a);
+        }
+
+        //函式表達式
+        let qwer = function(){
+            let a = 600;
+            console.log(a);
+        }
+        
+        // function qq(x){
+        //     console.log(x);
+        // }
+        // qq(456);
+        // function asdf(x,y){
+        //     console.log(x+y);
+        // }
+        // asdf(2,1);
+        // function test2(x=0,y=10){
+        //     console.log(x+y);
+        // }
+        // test2(0,0);
+        function qq(x,y){
+            return x+y;
+        }
+        console.log(qq(60,80));
+
+        let q = qq(100,20);
+        console.log(q);
+    </script>
+</body>
+</html>

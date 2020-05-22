@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //陣列 Array
+
+        // let a = new Array();
+        // a[0] = 'html';
+        // a[1] = 'css';
+        // a[2] = 'javascript';
+        // a[3] = 'php';
+
+        // let a = new Array('html','css','javascript','php');
+
+        let a = ['html','css','javascript'];
+        let b = ['PHP','ASP','JAVA','PYTHON'];
+
+        // console.log(a);
+        // console.log(a[0]);
+        // console.log(a[1]);
+        // console.log(a[2]);
+        // console.log(a[3]);
+
+        // console.log(a.length);
+        
+        // for(let i=0;i<a.length;i++){
+        //     console.log(a[i]);
+        // }
+        
+
+        // a.push('asp');
+        // a.pop();
+        // a.unshift('WebDesign');
+        // a.shift();
+        
+        // 拼接 splice
+        // a.splice(3,2,'ASP','JAVA');
+        // a.splice(3,1);
+        // a.splice(1,1);
+        
+        //切片 slice
+        let a_slice = a.slice(2,4);
+        console.log(a);
+        console.log(a_slice);
+
+        //合併 concat
+        // let c = a.concat(b);
+        let c = b.concat(a);
+        console.log(c);
+
+        //join 陣列->字串
+        let a_join = a.join('___');
+        console.log(a_join);
+        
+        //split 字串->陣列
+        let s = 'HELLO_WORLD_!!';
+        let s_split = s.split('_');
+        console.log(s_split);
+
+        //forEach
+        //迭代
+        a.forEach(function(data,idx){
+            console.log(idx,data);
+        })
+
+        // for( data in a){
+        //     console.log(a[data]);
+        // }
+    </script>
+</body>
+</html>

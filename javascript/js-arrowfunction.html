@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let q = function(){
+        //     console.log(100)
+        // }
+        // q();
+
+        // let q = () => {
+        //     console.log(100);
+        // }
+        // let q = (data) => {
+        //     console.log(data);
+        // }
+        // let q = data => {
+        //     console.log(data);
+        // }
+        // let q = (x,y) => {
+        //     console.log(x+y);
+        // }
+        // let q = data => {
+        //     return data;
+        // }
+        
+        // let q = function(data){
+            // data++;
+        //     return data;
+        // }
+        let q = data => data;
+        // let q = data => {data++; return data};
+
+        console.log(q(100));
+
+        let obj = {
+            name: {
+                first: 'john',
+                last:'chung',
+                method:function(){
+                    return this;
+                },
+                method2:()=>{
+                    return this;
+                }
+            }
+        }
+        console.log(obj.name.method())
+        console.log(obj.name.method2())
+
+    </script>
+</body>
+</html>
