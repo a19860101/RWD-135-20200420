@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="test()">click</button> -->
+    <button>click</button>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet neque magnam perferendis alias modi iusto, illo sed tempore? Libero at corrupti recusandae veritatis rem eaque officia ipsa mollitia dolorem quaerat!
+    </p>
+    <script>
+        
+        function test(){
+            // let p = document.getElementsByTagName('p')[0];
+            let p = document.querySelector('p');
+            p.style.color = '#8ccbbe'
+        }
+        let button = document.querySelector('button');
+        // button.onclick = function(){
+        //     let p = document.querySelector('p');
+        //     p.style.color = '#fcf876'
+        // }
+        // button.onclick = () => {
+        //     let p = document.querySelector('p');
+        //     p.style.color = '#b5076b'
+        // }
+        // button.addEventListener('click',test)
+        button.addEventListener('click',function(){
+            let p = document.querySelector('p');
+            p.style.color = '#b5076b'
+        })
+    </script>
+</body>
+</html>

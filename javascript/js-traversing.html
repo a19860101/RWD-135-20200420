@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam minus unde quae nisi similique suscipit. Cupiditate quam reiciendis repellat aliquam animi quo dolorum facere natus! Commodi non ipsum quidem suscipit. </p>
+        <ul id="menus">
+            <li><a href="#">menu 1</a></li>
+            <li><a href="#">menu 2</a></li>
+            <li><a href="#">menu 3</a></li>
+            <li><a href="#">menu 4</a></li>
+            <li><a href="#">menu 5</a></li>
+        </ul>
+    </div>
+    <script>
+        let a = document.querySelectorAll('a');
+        a.forEach(function(data){
+            data.onclick = function(){
+                // console.log(this);
+                console.log(this.parentElement.parentElement.previousElementSibling);
+                this.parentElement.parentElement.previousElementSibling.style.color = 'red';
+            }
+        })
+
+
+        let menus = document.getElementById('menus');
+        //父元素
+        // let menus_parent_element = menus.parentElement;
+        // let menus_parent_node = menus.parentNode;
+        // console.log(menus_parent_element);
+        // console.log(menus_parent_node);
+
+        //同輩元素
+        // let menus_prev_element_sibling = menus.previousElementSibling;
+        // let menus_prev_sibling = menus.previousSibling;
+
+        // console.log(menus_prev_element_sibling);
+        // console.log(menus_prev_sibling);
+
+        // let menus_next_element_sibling = menus.nextElementSibling;
+        // let menus_next_sibling = menus.nextSibling;
+
+        // console.log(menus_next_element_sibling);
+        // console.log(menus_next_sibling);
+
+        //子代元素
+        // let menus_childrdn = menus.children;
+        // let menus_child_node = menus.childNodes;
+
+        // console.log(menus_childrdn);
+        // console.log(menus_child_node);
+
+        // for(let i=0;i<menus_childrdn.length;i++){
+            // console.log(menus_childrdn[i]);
+        // }
+    </script>
+</body>
+</html>

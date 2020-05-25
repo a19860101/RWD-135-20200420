@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">dom: document object model</h1>
+    <p id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ex obcaecati quidem.
+    </p>
+    <ul>
+        <li class="list">list 1</li>
+        <li class="list">list 2</li>
+        <li class="list">list 3</li>
+        <li class="list">list 4</li>
+        <li class="list">list 5</li>
+        <li class="list">list 6</li>
+    </ul>
+    <a href="#">More</a>
+    <script>
+        let title = document.getElementById('title');
+        console.log(title);
+        title.style.color = '#2fc4b2';
+        title.style.backgroundColor = '#f96d80';
+        title.textContent = '<p>HELLO</p>';
+        title.innerHTML = '<p>HELLO</p>';
+
+        // let content = document.getElementById('content');
+        // console.log(content);
+        let lists = document.getElementsByClassName('list');
+        // lists[0].style.color = 'red';
+        // console.log(lists);
+        // console.log(lists[0]);
+        // console.log(lists[1]);
+        // console.log(lists[2]);
+        // console.log(lists[3]);
+        // console.log(lists[4]);
+        for(let i=0;i<lists.length;i++){
+            console.log(lists[i]);
+            lists[i].style.color = '#8ccbbe';
+        }
+        // let lis = document.getElementsByTagName('li');
+        // console.log(lis);
+        // for(let i=0;i<lis.length;i++){
+        //     console.log(lis[i]);
+        // }
+        
+        // let lists = document.querySelectorAll('.list');
+        // console.log(lists);
+        // for(let i=0;i<lists.length;i++){
+        //     console.log(lists[i]);
+        // }
+        // lists.forEach(function(list){
+            // console.log(list)
+        // })
+        // lists.forEach(list=>{
+        //     console.log(list)
+        // })
+        // let title = document.querySelector('#title');
+        // console.log(title);        
+
+        let li = document.querySelectorAll('li');
+        li.forEach(data => {
+            data.style.textDecoration = 'underline';
+            data.style.fontSize = '2em';
+            data.textContent = 'qqq';
+        })
+    </script>
+</body>
+</html>

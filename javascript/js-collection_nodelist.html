@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li class="list">list 1</li>
+        <li class="list">list 2</li>
+        <li class="list">list 3</li>
+        <li class="list">list 4</li>
+    </ul>
+    <script>
+        let lists_1 = document.getElementsByClassName('list');
+        let lists_2 = document.querySelectorAll('.list');
+        
+        console.log(lists_1.length);
+        console.log(lists_2.length);
+        
+        let li = document.createElement('li');
+        li.className = 'list'; 
+        document.getElementById('ul').appendChild(li);
+
+        console.log(lists_1.length);
+        console.log(lists_2.length);
+    </script>
+</body>
+</html>
