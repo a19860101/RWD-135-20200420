@@ -59,7 +59,10 @@
         function add(){
             let input = document.getElementById('input').value;
             let listGroup = document.querySelector('.list-group');
-
+            if(input == ''){
+                alert('請輸入內容');
+                return;
+            }
             let li = document.createElement('li');
             li.classList.add('list-group-item');
             li.append(input);
