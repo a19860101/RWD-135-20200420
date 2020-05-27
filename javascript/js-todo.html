@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-8 mt-5">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="input">
+                </div>
+                <button class="btn btn-primary btn-block" onclick="add()">新增</button>
+                <ul class="list-group mt-3">
+                    <li class="list-group-item">繳電話費</li>
+                    <li class="list-group-item">繳卡費</li>
+                    <li class="list-group-item">聯絡陳小姐</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function add(){
+            let input = document.getElementById('input').value;
+            let listGroup = document.querySelector('.list-group');
+
+            let textNode = document.createTextNode(input);
+            let li = document.createElement('li');
+            li.classList.add('list-group-item');
+            li.appendChild(textNode);
+            listGroup.appendChild(li);
+            document.getElementById('input').value = '';
+
+        }
+
+    </script>
+</body>
+</html>
