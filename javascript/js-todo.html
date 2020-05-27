@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <style>
         .list-group-item {
             cursor: pointer;
             transition: .3s;
+            /* vertical-align: middle; */
         }
         .list-group-item:hover {
             background-color: #ffc9c9;
@@ -21,6 +23,7 @@
         }
         .del {
             float: right;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -33,9 +36,9 @@
                 </div>
                 <button class="btn btn-primary btn-block" onclick="add()">新增</button>
                 <ul class="list-group mt-3">
-                    <li class="list-group-item complete">繳電話費 <span class="del">刪除</span></li>
-                    <li class="list-group-item">繳卡費 <span class="del">刪除</span></li>
-                    <li class="list-group-item">聯絡陳小姐 <span class="del">刪除</span></li>
+                    <li class="list-group-item complete">繳電話費 <span class="del fas fa-trash-alt fa-lg"></span></li>
+                    <li class="list-group-item">繳卡費 <span class="del fas fa-trash-alt fa-lg"></span></li>
+                    <li class="list-group-item">聯絡陳小姐 <span class="del fas fa-trash-alt fa-lg"></span></li>
                 </ul>
             </div>
         </div>
@@ -64,8 +67,8 @@
             document.getElementById('input').value = '';
 
             let span = document.createElement('span');
-            span.append('刪除');
-            span.classList.add('del');
+            // span.append('刪除');
+            span.classList.add('del','fas','fa-trash-alt','fa-lg');
             li.append(span);
 
         }
@@ -85,6 +88,9 @@
             // }
             if(data.target.className.indexOf('list-group-item') > -1){
                 data.target.classList.toggle('complete');
+            }
+            if(data.target.className.indexOf('del') > -1){
+                data.target.parentElement.remove();
             }
         }
     </script>
