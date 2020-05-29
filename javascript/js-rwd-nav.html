@@ -19,6 +19,9 @@
         nav .menu {
             display: none;
         }
+        nav .menu.active {
+            display: block;
+        }
         nav a {
             text-decoration: none;
             padding: 15px 30px;
@@ -59,8 +62,14 @@
             <a href="#">Contact</a>
         </div>
         <div class="rwd-btn">
-            <a href="#">RWD</a>
+            <a href="#" onclick="rwd()">RWD</a>
         </div>
     </nav>
+    <script>
+        function rwd(){
+           let menu = document.querySelector('.menu'); 
+           menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
