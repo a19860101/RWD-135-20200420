@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Segoe UI";
+        }
+        nav {
+            background-color: #919191;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav .menu {
+            display: none;
+        }
+        nav a {
+            text-decoration: none;
+            padding: 15px 30px;
+            color: #000;
+            display: block;
+        }
+        .rwd-btn {
+            display: block;
+            margin-left: auto;
+        }
+        @media (min-width: 600px){
+            nav {
+                background-color: #919191;
+                display: flex;
+                justify-content: space-between;
+            }
+            nav .menu {
+                display: block;
+            }
+            nav a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 15px 30px;
+                color: #000;
+            }
+            .rwd-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Product</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="rwd-btn">
+            <a href="#">RWD</a>
+        </div>
+    </nav>
+</body>
+</html>
