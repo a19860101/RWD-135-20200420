@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+        .tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            background-color: #ccc;
+        }
+        .tab-link {
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+        }
+        .tab-panel {
+            display: none;
+            padding: 15px;
+            background-color: #fff172;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        .tab-link.active {
+            background-color: #fff172;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-nav">
+            <a href="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#tab-3" class="tab-link">Tab 3</a>
+            <a href="#tab-4" class="tab-link">Tab 4</a>
+        </div>
+        <div id="tab-1" class="tab-panel active">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus doloremque sunt, neque eum explicabo voluptate corrupti accusamus amet! Autem earum blanditiis incidunt veritatis sapiente ex recusandae molestiae, eius minus tempora, ea, officia repudiandae cum ut vero natus a suscipit! Odio dolore expedita magnam similique voluptates aliquid eligendi quis dolorum esse accusamus sapiente porro fuga, iure rem aliquam quos tenetur enim molestiae soluta perspiciatis, sed, facere qui inventore placeat? Tempora sunt laudantium nostrum aliquam iste nobis non rem aut, aperiam asperiores repellendus saepe, repellat harum alias nesciunt ea incidunt suscipit atque odio totam. Pariatur tenetur minus vitae laborum praesentium dicta ad.
+            </p>
+        </div>
+        <div id="tab-2" class="tab-panel">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis corrupti dicta recusandae facilis laborum voluptates facere sequi repellendus, culpa totam quaerat fugiat possimus eum omnis doloremque? Voluptas, sapiente! Aliquid cupiditate beatae iure doloribus eaque ut quas, soluta in consequuntur optio! Iure eligendi nesciunt maiores natus soluta repellat totam, sequi architecto laboriosam nostrum error odit voluptate assumenda voluptatibus fugiat sint nam temporibus voluptas unde. Consequuntur explicabo aliquam iure quas eaque placeat ut quasi nemo atque, hic nulla dolorum, ea pariatur dignissimos molestias aperiam doloribus quod esse laboriosam reprehenderit autem deserunt?
+            </p>
+        </div>
+        <div id="tab-3" class="tab-panel">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quia provident eligendi quaerat? Est, sunt! Ratione, voluptates laborum beatae in numquam perspiciatis at enim libero commodi laboriosam dicta nesciunt ipsa quia, optio incidunt, ipsam tempora debitis? Quod iure doloribus maiores molestiae sint eligendi beatae! Hic quas ratione consequuntur deleniti aut.
+            </p>
+        </div>
+        <div id="tab-4" class="tab-panel">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita blanditiis pariatur mollitia nemo labore obcaecati suscipit dolore atque inventore architecto veniam ipsa, esse voluptates consequuntur eos ratione, debitis asperiores fugiat aspernatur. Earum doloribus quia illo, pariatur delectus molestiae distinctio fugit libero quisquam eveniet impedit officiis rem vitae rerum id! Quia praesentium similique et temporibus, voluptatem delectus recusandae accusantium maxime autem, iusto ratione repellendus optio dicta distinctio perferendis rerum odio dolor fuga tempore aspernatur voluptatum. Esse itaque fugiat atque voluptatibus incidunt?
+            </p>
+        </div>
+    </div>
+    <script>
+        let t_link = document.querySelectorAll('.tab-link');
+        t_link.forEach(function(tlink){
+            tlink.onclick = function(data){
+                // let href = this.getAttribute('href');
+                let href =  data.target.getAttribute('href');
+                console.log(href);
+                t_link.forEach(function(t){
+                    t.classList.remove('active');
+                })
+                // this.classList.add('active')
+                data.target.classList.add('active');
+
+                let t_panel = document.querySelectorAll('.tab-panel');
+                t_panel.forEach(function(panel){
+                    // console.log(panel.getAttribute('id'));
+                    if('#'+panel.id === href){
+                        panel.classList.add('active');
+                    }else{
+                        panel.classList.remove('active');
+                    }
+
+                })
+            }
+        })
+    </script>
+</body>
+</html>
