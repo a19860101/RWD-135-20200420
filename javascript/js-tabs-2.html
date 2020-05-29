@@ -13,6 +13,8 @@
         .tabs {
             width: 600px;
             margin: auto;
+
+            position: relative;
         }
         .tab-nav {
             background-color: #ccc;
@@ -22,17 +24,40 @@
             text-decoration: none;
             display: inline-block;
             padding: 15px 30px;
+            transition: .3s;
+        }
+        .tab-link.active {
+            background-color: #fff172;
         }
         .tab-panel {
             display: none;
             padding: 15px;
             background-color: #fff172;
+            /* transition: .6s; */
+            /* opacity: 0; */
+            
+            /* position: absolute; */
+
+            transform-origin: top;
+
         }
         .tab-panel.active {
             display: block;
+            /* opacity: 1; */
+            animation: fade 1s;
         }
-        .tab-link.active {
-            background-color: #fff172;
+        
+        @keyframes fade{
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes leftin{
+            from {transform: scaleX(0);}
+            to {transform: scaleX(1);}
+        }
+        @keyframes topin {
+            from {transform: scaleY(0)}
+            to {transform: scaleY(1)}
         }
     </style>
 </head>
