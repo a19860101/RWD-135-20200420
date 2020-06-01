@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <style>
+        .list-group-item {
+            cursor: pointer;
+            transition: .3s;
+            /* vertical-align: middle; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list-group-item:hover {
+            background-color: #ffc9c9;
+        }
+
+        .list-group-item.complete {
+            text-decoration: line-through;
+            color: #707070;
+            background-color: #d3d3d3;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-8 mt-5">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="input">
+                </div>
+                <button class="btn btn-primary btn-block" id="add">新增</button>
+                <ul class="list-group mt-3">
+                    <li class="list-group-item complete">繳電話費 <span class="del fas fa-trash-alt fa-lg"></span></li>
+                    <li class="list-group-item">繳卡費 <span class="del fas fa-trash-alt fa-lg"></span></li>
+                    <li class="list-group-item">聯絡陳小姐 <span class="del fas fa-trash-alt fa-lg"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#add').click(function(){
+                let input = $('#input').val();
+                //字串樣板
+                let c = `<li class="list-group-item">${input}<span class="del fas fa-trash-alt fa-lg"></span></li>`;
+                $('.list-group').append(c);
+                $('#input').val('');
+            })
+            $(document).on('click','.list-group-item',function(){
+                $(this).toggleClass('complete');
+                // console.log($(this))
+            });
+            $(document).on('click','.del',function(){
+                $(this).parent().remove();
+            })
+
+        })
+    </script>
+</body>
+
+</html>

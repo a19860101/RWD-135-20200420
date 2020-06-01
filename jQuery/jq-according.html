@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Segoe UI";
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        h2 {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #eee;
+            border-bottom: 1px solid #ccc;
+            transition: .3s;
+        }
+        h2:hover {
+            background-color: #f2fa83;
+        }
+        h2.active {
+            background-color: #f2fa83;
+        }
+        p {
+            display: none;
+            padding: 20px;
+            background-color: #ddd;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>TITLE 1</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam obcaecati doloribus laboriosam? Dolore expedita est velit nostrum voluptas non harum laborum earum quaerat eaque? Quod sequi porro eum quos recusandae?
+        </p>
+        <h2>TITLE 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui repellendus harum deleniti nobis eveniet sit deserunt, distinctio totam unde ea sint beatae! Dolore accusamus excepturi, magnam vitae magni, fugiat totam quae et dolorem dolor delectus error eveniet perspiciatis modi voluptatibus reprehenderit sed perferendis nostrum voluptas nulla id voluptatem optio? Quam voluptatum doloribus rem, non recusandae esse modi molestias possimus! Aspernatur.
+        </p>
+        <h2>TITLE 3</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, obcaecati earum doloribus asperiores ipsam natus, magnam, sit deserunt modi cumque ab ad nisi ducimus dolorem nobis autem quos dicta atque quisquam commodi doloremque eaque nesciunt. Excepturi expedita at qui totam facere sunt, quae perspiciatis iusto deserunt asperiores, incidunt vero sint.
+        </p>
+        <h2>TITLE 4</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam obcaecati doloribus laboriosam? Dolore expedita est velit nostrum voluptas non harum laborum earum quaerat eaque? Quod sequi porro eum quos recusandae?
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $('h2').click(function(){
+                // $(this).next().toggle(600);
+                //show(),hide()切換
+                // $(this).next().fadeToggle();
+                //fadeIn(),fadeOut()切換
+               
+                // $(this).next().slideToggle();
+                //slideDown(),slideUp()切換
+
+                // $(this).toggleClass('active');
+                // addClass()  classList.add()
+                // removeClass()  classList.remove()
+                // toggleClass() classList.toggle()
+
+                $('p').slideUp();
+                $(this).next().slideToggle();
+
+                $('h2').removeClass('active');
+                $(this).addClass('active');
+            })
+        })
+    </script>
+</body>
+</html>
