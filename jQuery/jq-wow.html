@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <style>
         * {
             margin: 0;
@@ -110,19 +110,19 @@
         </div>
     </div>
     <div id="product" class="full-width row">
-        <div class="col-4">
+        <div class="col-4 wow fadeInLeft">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
             </p>
         </div>
-        <div class="col-4">
+        <div class="col-4 wow fadeInUp">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
             </p>
         </div>
-        <div class="col-4">
+        <div class="col-4 wow fadeInRight">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
@@ -164,10 +164,11 @@
         </div>
     </div>
 
-    <a href="#" id="gotop" class="animate__animated">TOP</a>
+    <a href="#" id="gotop" class="animated">TOP</a>
     <script>
+        new WOW().init();
         $(function(){
-            new WOW().init();
+            
             $('nav').find('a').click(function(e){
                 let target = $(this).data('target');
                 let o = $(target).offset().top;
@@ -184,8 +185,8 @@
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
-                let a_in = 'animate__bounceIn';
-                let a_out = 'animate__hinge';
+                let a_in = 'bounceIn';
+                let a_out = 'hinge';
                 if(h > 800){
                     // $('#gotop').show();
                     // $('#gotop').fadeIn();
