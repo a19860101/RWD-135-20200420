@@ -18,6 +18,14 @@
             background-color: #222;
             justify-content: center;
             position: fixed;
+            transition: .5s;
+        }
+        nav.scroll {
+            padding: 15px 0;
+            background-color: #eee;
+        }
+        nav.scroll a {
+            color: #222;
         }
         nav a {
             margin: 0 15px;
@@ -57,6 +65,7 @@
             text-decoration: none;
             text-align: center;
             line-height: 40px;
+            display: none;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -95,6 +104,15 @@
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
+                if(h > 800){
+                    // $('#gotop').show();
+                    $('#gotop').fadeIn();
+                    $('nav').addClass('scroll');
+                }else{
+                    // $('#gotop').hide();
+                    $('#gotop').fadeOut();
+                    $('nav').removeClass('scroll');
+                }
                 // console.log(h);
                 $('nav a').each(function(){
                     let target = $(this).data('target');
