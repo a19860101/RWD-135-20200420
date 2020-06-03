@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
     <style>
         * {
             margin: 0;
@@ -82,7 +84,7 @@
     <div id="service"></div>
     <div id="contact"></div>
 
-    <a href="#" id="gotop">TOP</a>
+    <a href="#" id="gotop" class="animate__animated">TOP</a>
     <script>
         $(function(){
             $('nav').find('a').click(function(e){
@@ -104,13 +106,17 @@
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
+                let a_in = 'animate__bounceIn';
+                let a_out = 'animate__hinge';
                 if(h > 800){
                     // $('#gotop').show();
-                    $('#gotop').fadeIn();
+                    // $('#gotop').fadeIn();
+                    $('#gotop').show().removeClass(a_out).addClass(a_in);
                     $('nav').addClass('scroll');
                 }else{
                     // $('#gotop').hide();
-                    $('#gotop').fadeOut();
+                    // $('#gotop').fadeOut();
+                    $('#gotop').removeClass(a_in).addClass(a_out);
                     $('nav').removeClass('scroll');
                 }
                 // console.log(h);
