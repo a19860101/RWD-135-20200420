@@ -82,14 +82,26 @@
                 $('html,body').animate({
                     scrollTop: o,
                 })
-                $('nav a').removeClass('active');
-                $(this).addClass('active');
+                // $('nav a').removeClass('active');
+                // $(this).addClass('active');
             })
             $('#gotop').click(function(){
                 $('html,body').animate({
                     scrollTop: 0
                 })
             })
+            $(window).scroll(function(){
+                let h = $(this).scrollTop();
+                // console.log(h);
+                $('nav a').each(function(){
+                    let target = $(this).data('target');
+                    console.log($(target).offset().top);
+                    if(h >= $(target).offset().top){
+                        $('nav a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
+            });
         })
     </script>
 </body>
