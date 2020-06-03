@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Segoe UI","Microsoft Jhenghei";
+        }
+        nav {
+            display: flex;
+            width: 100%;
+            padding: 25px 0;
+            background-color: #222;
+            justify-content: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #eee;
+        }
+        #about,#service,#product,#contact {
+            height: 100vh;   
+        }
+        #about {
+            background-color: #ffd31d;
+        }
+        #product {
+            background-color: #d63447;
+        }
+        #service {
+            background-color: #74d4c0;
+        }
+        #contact {
+            background-color: #035aa6;
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#" data-target="#about">關於</a>
+        <a href="#" data-target="#product">產品</a>
+        <a href="#" data-target="#service">服務項目</a>
+        <a href="#" data-target="#contact">聯絡我們</a>
+    </nav>
+    <div id="about"></div>
+    <div id="product"></div>
+    <div id="service"></div>
+    <div id="contact"></div>
+    <script>
+        $(function(){
+            $('nav').find('a').click(function(){
+                let target = $(this).data('target');
+                let o = $(target).offset().top;
+                $('html,body').animate({
+                    scrollTop: o,
+                })
+            })
+        })
+    </script>
+</body>
+</html>

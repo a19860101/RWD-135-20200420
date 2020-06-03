@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Segoe UI","Microsoft Jhenghei";
+        }
+        nav {
+            display: flex;
+            width: 100%;
+            padding: 25px 0;
+            background-color: #222;
+            justify-content: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #eee;
+        }
+        #about,#service,#product,#contact {
+            height: 100vh;   
+        }
+        #about {
+            background-color: #ffd31d;
+        }
+        #product {
+            background-color: #d63447;
+        }
+        #service {
+            background-color: #74d4c0;
+        }
+        #contact {
+            background-color: #035aa6;
+        }
+        #test {
+            height: 100vh;
+            background-color: #222;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#">關於</a>
+        <a href="#">產品</a>
+        <a href="#">服務項目</a>
+        <a href="#">聯絡我們</a>
+        <a href="#">test</a>
+    </nav>
+    <div id="about"></div>
+    <div id="product"></div>
+    <div id="service"></div>
+    <div id="test"></div>
+    <div id="contact"></div>
+    <script>
+        $(function(){
+            let a = $('#about').offset().top;
+            let p = $('#product').offset().top;
+            let s = $('#service').offset().top;
+            let c = $('#contact').offset().top;
+            let t = $('#test').offset().top;
+            console.log(a,p,s,c);
+            $('nav').find('a').eq(0).click(function(){
+                $('html,body').animate({
+                    scrollTop: a
+                })
+            })
+            $('nav').find('a').eq(1).click(function(){
+                $('html,body').animate({
+                    scrollTop: p
+                })
+            })
+            $('nav').find('a').eq(2).click(function(){
+                $('html,body').animate({
+                    scrollTop: s
+                })
+            })
+            $('nav').find('a').eq(3).click(function(){
+                $('html,body').animate({
+                    scrollTop:c
+                })
+            })
+            $('nav').find('a').eq(4).click(function(){
+                $('html,body').animate({
+                    scrollTop:t
+                })
+            })
+        })
+    </script>
+</body>
+</html>
