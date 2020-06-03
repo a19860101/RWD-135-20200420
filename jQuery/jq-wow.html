@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Segoe UI","Microsoft Jhenghei";
+            box-sizing: border-box;
+        }
+        nav {
+            display: flex;
+            width: 100%;
+            padding: 25px 0;
+            background-color: #222;
+            justify-content: center;
+            position: fixed;
+            transition: .5s;
+        }
+        nav.scroll {
+            padding: 15px 0;
+            background-color: #eee;
+        }
+        nav.scroll a {
+            color: #222;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #eee;
+            display: inline-block;
+        }
+        nav a.active {
+            color: #d9455f;
+            text-decoration: underline;
+        }
+        #about,#service,#product,#contact {
+            height: 100vh;   
+        }
+        #about {
+            background-color: #ffd31d;
+        }
+        #product {
+            background-color: #d63447;
+        }
+        #service {
+            background-color: #74d4c0;
+        }
+        #contact {
+            background-color: #035aa6;
+        }
+        #gotop {
+            display: block;
+            position: fixed;
+            z-index: 999;
+            width: 40px;
+            height: 40px;
+            right: 30px;
+            bottom: 30px;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            display: none;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .col-6 {
+            flex: 0 0 calc(100% / 12 * 6);
+            padding: 15px;
+        }
+        .col-4 {
+            flex: 0 0 calc(100% / 12 * 4);
+            padding: 15px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#" data-target="#about" class="active">關於</a>
+        <a href="#" data-target="#product">產品</a>
+        <a href="#" data-target="#service">服務項目</a>
+        <a href="#" data-target="#contact">聯絡我們</a>
+    </nav>
+    <div id="about" class="full-width row">
+        <div class="col-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+        <div class="col-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+    </div>
+    <div id="product" class="full-width row">
+        <div class="col-4">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+        <div class="col-4">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+        <div class="col-4">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+    </div>
+    <div id="service" class="full-width row">
+        <div class="col-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+        <div class="col-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+    </div>
+    <div id="contact" class="full-width row">
+        <div class="col-4">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+        <div class="col-4">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+        <div class="col-4">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore nisi magni tenetur, fuga qui necessitatibus? Quo nam quidem commodi. Cum cupiditate minus repellat exercitationem iste nihil atque laboriosam rerum.
+            </p>
+        </div>
+    </div>
+
+    <a href="#" id="gotop" class="animate__animated">TOP</a>
+    <script>
+        $(function(){
+            new WOW().init();
+            $('nav').find('a').click(function(e){
+                let target = $(this).data('target');
+                let o = $(target).offset().top;
+                $('html,body').animate({
+                    scrollTop: o,
+                })
+                e.preventDefault();
+            })
+            $('#gotop').click(function(e){
+                $('html,body').animate({
+                    scrollTop: 0
+                })
+                e.preventDefault();
+            })
+            $(window).scroll(function(){
+                let h = $(this).scrollTop();
+                let a_in = 'animate__bounceIn';
+                let a_out = 'animate__hinge';
+                if(h > 800){
+                    // $('#gotop').show();
+                    // $('#gotop').fadeIn();
+                    $('#gotop').show().removeClass(a_out).addClass(a_in);
+                    $('nav').addClass('scroll');
+                }else{
+                    // $('#gotop').hide();
+                    // $('#gotop').fadeOut();
+                    $('#gotop').removeClass(a_in).addClass(a_out);
+                    $('nav').removeClass('scroll');
+                }
+                // console.log(h);
+                $('nav a').each(function(){
+                    let target = $(this).data('target');
+                    console.log($(target).offset().top);
+                    if(h >= $(target).offset().top){
+                        $('nav a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
+            });
+        })
+    </script>
+</body>
+</html>
