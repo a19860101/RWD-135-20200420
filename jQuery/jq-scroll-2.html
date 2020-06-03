@@ -17,11 +17,15 @@
             padding: 25px 0;
             background-color: #222;
             justify-content: center;
+            position: fixed;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #eee;
+        }
+        nav a.active {
+            color: #d9455f;
         }
         #about,#service,#product,#contact {
             height: 100vh;   
@@ -44,7 +48,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about">關於</a>
+        <a href="#" data-target="#about" class="active">關於</a>
         <a href="#" data-target="#product">產品</a>
         <a href="#" data-target="#service">服務項目</a>
         <a href="#" data-target="#contact">聯絡我們</a>
@@ -61,6 +65,8 @@
                 $('html,body').animate({
                     scrollTop: o,
                 })
+                $('nav a').removeClass('active');
+                $(this).addClass('active');
             })
         })
     </script>
