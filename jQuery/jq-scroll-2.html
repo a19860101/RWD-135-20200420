@@ -76,7 +76,7 @@
     <a href="#" id="gotop">TOP</a>
     <script>
         $(function(){
-            $('nav').find('a').click(function(){
+            $('nav').find('a').click(function(e){
                 let target = $(this).data('target');
                 let o = $(target).offset().top;
                 $('html,body').animate({
@@ -84,11 +84,14 @@
                 })
                 // $('nav a').removeClass('active');
                 // $(this).addClass('active');
+                // return false;
+                e.preventDefault();
             })
-            $('#gotop').click(function(){
+            $('#gotop').click(function(e){
                 $('html,body').animate({
                     scrollTop: 0
                 })
+                e.preventDefault();
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
