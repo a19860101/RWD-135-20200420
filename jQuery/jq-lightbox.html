@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+</head>
+<body>
+    <a href="https://picsum.photos/id/35/1200/800" data-lightbox="g" data-title="仙人掌">
+        <img src="https://picsum.photos/id/35/1200/800" alt="">
+    </a>
+    <a href="https://picsum.photos/id/142/1200/800" data-lightbox="g" data-title="城堡">
+        <img src="https://picsum.photos/id/142/1200/800" alt="">
+    </a>
+    <a href="https://picsum.photos/id/48/1200/800" data-lightbox="g1">
+        <img src="https://picsum.photos/id/48/1200/800" alt="">
+    </a>
+    <a href="https://picsum.photos/id/38/1200/800" data-lightbox="g1">
+        <img src="https://picsum.photos/id/38/1200/800" alt="">
+    </a>
+    <script>
+        lightbox.option({
+            fadeDuration: 300,
+            imageFadeDuration: 300,
+            albumLabel: "%1 / %2"
+        })
+    </script>
+</body>
+</html>
