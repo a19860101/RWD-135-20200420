@@ -8,7 +8,22 @@
         * {
             font-family: "Segoe UI";
         }
+        .container {
+            /* width: 302px; */
+            margin: auto;
+        }
+        /* @media (min-width: 604px){
+            .container {
+                width: 604px;
+                
+            }
+        }
+        @media (min-width: 906px){
+            .container {
+                width: 906px;
 
+            }
+        } */
         .box {
             width: 250px;
             /* text-align: justify; */ 
@@ -23,7 +38,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script>
         $(function(){
-            $('.container').masonry();
+            $('.container').masonry({
+                isFitWidth: true
+            });
         })
     </script>
 </head>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .box {
+            width: 400px;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(function(){
+            // $('.container').masonry({
+            //     isFitWidth: true
+            // });
+            $('.container').imagesLoaded(function(){
+                $('.container').masonry({
+                    isFitWidth: true
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="images/001.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/004.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/002.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/007.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/003.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/006.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="images/005.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
