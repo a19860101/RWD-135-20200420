@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
     <style>
         header {
-            width: 800px;
+            width: 100%;
             margin: auto;
         }
         .owl-theme .owl-nav [class*=owl-]{
@@ -38,17 +38,32 @@
     <script>
         $(function(){
             $('.owl-carousel').owlCarousel({
-                items: 1,
+                items:1,
                 autoplay: true,
                 loop: true,
                 autoplayTimeout: 6000,
                 autoplaySpeed: 1500,
-                dots: true,
+                dots: false,
                 dotsSpeed: 1500,
-                nav: true,
+                nav: false,
                 navSpeed: 1500,
                 navText:['<i class="fas fa-chevron-circle-left fa-lg"></i>','<i class="fas fa-chevron-circle-right fa-lg"></i>'],
                 navElement:'button',
+                // stagePadding:100,
+                // margin: 30,
+                // center: true
+                responsive:{
+                    1200: {
+                        items: 3,
+                        nav: true,
+                        dots: true
+                    },
+                    800: {
+                        items: 2,
+                        nav: true,
+                        dots: true
+                    }
+                }
             });
         })
     </script>
