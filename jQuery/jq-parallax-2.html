@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .parallax {
+            height: 100vh;
+        }
+
+        #second {
+            background-color: #a0c1b8;
+        }
+
+        #fourth {
+            background-color: #709fb0;
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+
+</head>
+<body>
+    <div class="parallax" data-parallax="scroll" id="first" data-image-src="images/001.jpg"></div>
+    <div class="parallax" id="second"></div>
+    <div class="parallax" data-parallax="scroll" id="third" data-image-src="images/002.jpg"></div>
+    <div class="parallax" id="fourth"></div>
+</body>
+</html>
