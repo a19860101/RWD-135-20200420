@@ -9,43 +9,70 @@
             margin: 0;
             padding: 0;
             border: 0;
-            font-family: "Segoe UI";
+            font-family: "Segoe UI","Microsoft Jhenghei";
         }
         h1 {
             position: fixed;
+            /* display: none; */
+            /* transform: translateX(-100%); */
+            opacity: 0;
+            transition: .5s;
+            font-size: 60px;
         }
         .black {
             background: #0e0e0e url("images/black.png") no-repeat center 300px fixed;
             height: 100vh;
         }
         .black h1 {
-            color: #777777;
+            color: #9c9c9c;
         }
         .white {
             background: #ffffff url("images/white.png") no-repeat center 300px fixed;
             height: 100vh;
         }
         .white h1 {
-            top: 50px;
+            top: 80px;
         }
         .red {
             background: #d62b2b url("images/red.png") no-repeat center 300px fixed;
             height: 100vh;
         }
         .red h1 {
-            top: 100px;
+            top: 160px;
+        }
+        h1.active {
+            /* display: block; */
+            /* transform: translateX(0); */
+            opacity: 1;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                let h = $(this).scrollTop();
+                $('div').each(function(){
+                    let target = $(this).offset().top;
+                    // console.log(target)
+                    if(h >= target){
+                        $(this).find('h1').addClass('active')
+                    }else{
+                        $(this).find('h1').removeClass('active')
+                    }
+                })
+            })
+        })
+    </script>
 </head>
 <body>
     <div class="black">
-        <h1>black</h1>
+        <h1 class="active">有黑色</h1>
     </div>
     <div class="white">
-        <h1>white</h1>
+        <h1>有白色</h1>
     </div>
     <div class="red">
-        <h1>red</h1>
+        <h1>當然還有紅色</h1>
     </div>
 </body>
 </html>
