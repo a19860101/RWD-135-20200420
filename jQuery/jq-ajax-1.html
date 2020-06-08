@@ -15,7 +15,9 @@
                 success: function(data){
                     console.log(data);
                     data.forEach(function(item){
-                        console.log(item)
+                        console.log(item.Site);
+                        console.log(item.county);
+                        console.log(item.PM25);
                     })
                 },
                 error: function(){
