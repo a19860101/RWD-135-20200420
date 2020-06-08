@@ -10,13 +10,12 @@
     <script>
         $(function(){
             $.ajax({
-                url: 'data.json',
-                dataType: 'json',
+                url: 'https://opendata.epa.gov.tw/webapi/Data/ATM00625/?$skip=0&$top=1000&format=json',
+                dataType: 'jsonp',
                 success: function(data){
                     console.log(data);
                     data.forEach(function(item){
-                        console.log(item.name)
-                        console.log(item.mail)
+                        console.log(item)
                     })
                 },
                 error: function(){
