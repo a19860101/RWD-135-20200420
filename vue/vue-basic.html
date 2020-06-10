@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <!-- <img v-bind:src="img"> -->
+        <img :src="img" id="img" @click="imgEffect()">
+        <a v-bind:href="link" v-bind:title="link">yahoo</a>
+        <!-- <button v-on:click="test2()">click</button> -->
+        <button @click="test()">click</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                title: 'HELLO World!!',
+                img: 'https://picsum.photos/id/15/200',
+                link: 'https://tw.yahoo.com'
+            },
+            methods:{
+                test:function(){
+                    // alert('hello VUE!!!');
+                    alert(this.title);
+                },
+                test2:function(){
+                    console.log(this.link);
+                },
+                imgEffect:function(){
+                    document.getElementById('img').style.opacity = 0.5;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

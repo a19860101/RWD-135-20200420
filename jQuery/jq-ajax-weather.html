@@ -8,7 +8,7 @@
 </head>
 <body>
     <select id="city">
-        <option>--請選擇城市--</option>
+        <option value="null">--請選擇城市--</option>
         <option value="taipei">台北</option>
         <option value="bangkok">曼谷</option>
         <option value="tokyo">東京</option>
@@ -20,11 +20,14 @@
     <script>
         $(function(){
             $('#city').change(function(){
-                console.log($(this).val())
+                // console.log($(this).val())
                 let city = $(this).val();
-                weather(city);
+                if(city == 'null'){
+                    return;
+                }
+                weather(city)
             })
-            function weather(city,city_txt){
+            function weather(city){
                 $('.container').empty();
                 $.ajax({
                     url:'https://api.openweathermap.org/data/2.5/weather',
@@ -36,7 +39,7 @@
                     },
                     dataType:'json',
                     success:function(data){
-                        console.log(data);
+                        // console.log(data);
                         let c = `
                             <div>${city}今日天氣:${data.weather[0].description}</div>
                             <div><img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"></div>
